@@ -2,12 +2,13 @@ import axios from "axios";
 
 export const identifySoil = async ({image, testName}) => {
     let formData = new FormData();
-
-    formData.append("image", image)
+    formData.append('image', image)
     formData.append('testName', testName)
 
+    for (var key of formData.entries()) {
+        console.log(key);
+    }
 
-    console.log({formData})
     try {
         const res = await axios.post(
             "http://localhost:5000/detect",
@@ -18,7 +19,7 @@ export const identifySoil = async ({image, testName}) => {
                 },
             }
         );
-        console.log({res: res.data.result})
+        console.log(res.data);
         return Promise.resolve(res.data)
     } catch (e) {
         console.log(e)

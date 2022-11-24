@@ -12,12 +12,12 @@ export default function InfoComponent({name}) {
                description={textData.description}/>
         <p>The soil we have detected is <strong className="font-bold">{name}</strong></p>
         {
-            data[name.toLowerCase()].map((crop => {
+            data[name.toLowerCase()].map(((crop,index) => {
                 {
                     console.log(crop)
                 }
                 return (
-                    <div>
+                    <div key={index}>
                         <div className="flex items-center justify-center">
                             <li>
                                 <button className={(vege[crop.toLowerCase()] ? " underline ": "") + " text-lg"} onClick={() => {

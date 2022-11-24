@@ -1,4 +1,3 @@
-import DropzoneComp from "./dropzone";
 import { ToastContainer, toast } from 'react-toastify';
 import {useState} from "react";
 import {useRouter} from "next/router";
@@ -27,7 +26,8 @@ export default function Home() {
                             <RiPlantFill className="text-2xl mx-2"/>
                             Detect Diseases
                     </div>
-                    <div className="p-5 bg-violet-500 text-white rounded-lg flex justify-center items-center cursor-pointer hover:shadow-md hover:bg-violet-600">
+                    <div className="p-5 bg-violet-500 text-white rounded-lg flex justify-center items-center cursor-pointer hover:shadow-md hover:bg-violet-600"
+                    onClick={()=>{router.push('/soil')}}>
                             <GiPlantWatering className="text-2xl mx-2"/>
                             Soil Check
                     </div>

@@ -41,8 +41,8 @@ function DropzoneComp({testName, setRespose}) {
 
                         <div className="my-10 text-center" key={index}>
                             <p className="-mt-5 mb-10">We are all ready to scan the image!</p>
-                            <div className="shadow rounded mx-auto">
-                                <img className="object-fill h-48 w-96" src={previewImage} alt=""/>
+                            <div className="shadow rounded mx-auto flex justify-center items-center">
+                                <img className="object-fill" src={previewImage} alt=""/>
                             </div>
 
                             <p className="text-center

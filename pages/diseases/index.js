@@ -48,6 +48,9 @@ export default function Home() {
               <h1 className="font-bold text-3xl my-4 mx-auto w-fit uppercase">
                 {response.result}{" "}
               </h1>
+              <h1 className="font-bold text-3xl my-4 mx-auto w-fit uppercase text-red-500">
+                {response.error}{" "}
+              </h1>
             </>
           )}
         </div>

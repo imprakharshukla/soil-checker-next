@@ -11,30 +11,24 @@ export default function InfoComponent({name}) {
         <Modal showModal={showModal} setShowModal={setShowModal} heading={textData.heading}
                description={textData.description}/>
         <p>The soil we have detected is <strong className="font-bold">{name}</strong></p>
+        <div className="grid grid-cols-3 items-center justify-center gap-5 mt-5">  
         {
             data[name.toLowerCase()].map(((crop,index) => {
-                {
-                    console.log(crop)
-                }
+         
                 return (
-                    <div key={index}>
-                        <div className="flex items-center justify-center">
-                            <li>
-                                <button className={(vege[crop.toLowerCase()] ? " underline ": "") + " text-lg"} onClick={() => {
-                                    if(vege[crop.toLowerCase()]) {
-                                        setShowModal(true)
-                                        setTextData({
-                                            heading: crop,
-                                            description: vege[crop.toLowerCase()]
-                                        })
-                                    }
-                                }}>{crop}</button>
-                            </li>
-                        </div>
-                    </div>
+                    <span key={index} className={(vege[crop.toLowerCase()] ? "bg-green-400 hover:bg-green-500 cursor-pointer ": "bg-green-50 cursor-not-allowed ") + "text-lg col-span-1 py-3 rounded-lg capitalize"} onClick={() => {
+                        if(vege[crop.toLowerCase()]) {
+                            setShowModal(true)
+                            setTextData({
+                                heading: crop,
+                                description: vege[crop.toLowerCase()]
+                            })
+                        }
+                    }}>{crop}</span>
                 )
-
+                
             }))
         }
+        </div>
     </div>)
 }

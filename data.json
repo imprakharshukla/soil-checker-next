@@ -1,0 +1,7 @@
+{
+  "black soil": ["Cotton", "Fruits", "Wheat", "Jower", "sugercane", "Tobacco", "Citrus"],
+  "red soil": ["Rice", "Broccoli", "Brussels", "cabbage", "Cauliflower", "bean"],
+  "loamy soil": ["Wheat", "sugercane", "cotton", "Pulses", "Oil Seeds", "Tomatoes", "Green Beans", "Onion"],
+  "clayey soil": ["Cotton", "wheat", "rice", "millets", "tabacco", "oil", "seeds", "potatoes", "fruits"],
+  "sandy soil": ["Carrots", "potatoes", "Tomatoes", "corn", "watermelon", "Beans", "cucumber", "Potates"]
+}
